@@ -115,10 +115,15 @@ def solve_quartic(a, b, c, d, e):
     if y < 0:
         y = 0
 
-    if b1 < 0:
-        r = -math.sqrt(y**2 + b2*y + b2**2/4 - b0)
+    s = y**2 + b2*y + b2**2/4 - b0
+    # protection from root of negative number
+    if s > 0:
+        if b1 < 0:
+            r = -math.sqrt(s)
+        else:
+            r = math.sqrt(s)
     else:
-        r = math.sqrt(y**2 + b2*y + b2**2/4 - b0)
+        r = float("nan")
 
     # repeating stuff
     p = cmath.sqrt(y/2) - cc

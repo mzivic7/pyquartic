@@ -1,5 +1,5 @@
 from numba.pycc import CC
-from numba import njit, float64, complex128
+from numba import float64, complex128
 from numba.types import UniTuple
 import pyquartic
 
@@ -12,4 +12,3 @@ cc.export('solve_quartic', UniTuple(complex128, 4)(float64, float64, float64, fl
 
 if __name__ == "__main__":
     cc.compile()
-
