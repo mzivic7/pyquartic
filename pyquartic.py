@@ -60,12 +60,12 @@ def solve_cubic(a, b, c, d):
         n = a2/3
 
         # solutions
-        fi1 = theta / 3
-        fi2 = fi1 - pi23
-        fi3 = fi1 + pi23
-        z1 = complex(m * math.cos(fi1) - n)
-        z2 = complex(m * math.cos(fi2) - n)
-        z3 = complex(m * math.cos(fi3) - n)
+        phi1 = theta / 3
+        phi2 = phi1 - pi23
+        phi3 = phi1 + pi23
+        z1 = complex(m * math.cos(phi1) - n)
+        z2 = complex(m * math.cos(phi2) - n)
+        z3 = complex(m * math.cos(phi3) - n)
     return (z1, z2, z3)
 
 

@@ -1,3 +1,14 @@
+"""
+Modified Ferrari's quartic solver and modified Cardano's cubic solver for Python (4th and 3rd order polynomials)
+Using modified algorithms from: https://quarticequations.com
+Functions can optionally be 'numbarized' by just installing numba
+Python implementation by: mzivic7
+Source code: https://github.com/mzivic7/pyquartic
+Issues: https://github.com/mzivic7/pyquartic/issues
+Licence: GNU General Public License v3.0
+"""
+
+
 import math
 import cmath
 
@@ -43,12 +54,12 @@ def solve_cubic(a, b, c, d):
         n = a2/3
 
         # solutions
-        fi1 = theta / 3
-        fi2 = fi1 - pi23
-        fi3 = fi1 + pi23
-        z1 = complex(m * math.cos(fi1) - n)
-        z2 = complex(m * math.cos(fi2) - n)
-        z3 = complex(m * math.cos(fi3) - n)
+        phi1 = theta / 3
+        phi2 = phi1 - pi23
+        phi3 = phi1 + pi23
+        z1 = complex(m * math.cos(phi1) - n)
+        z2 = complex(m * math.cos(phi2) - n)
+        z3 = complex(m * math.cos(phi3) - n)
     return (z1, z2, z3)
 
 
