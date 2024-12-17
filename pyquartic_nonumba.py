@@ -9,9 +9,8 @@ Licence: GNU General Public License v3.0
 """
 
 
-import math
 import cmath
-
+import math
 
 # constants
 sq3 = math.sqrt(3)
@@ -106,8 +105,7 @@ def solve_quartic(a, b, c, d, e):
 
     # one real root of Ferrari's resolvent cubic
     y = solve_cubic_one(b2, b2**2/4 - b0, -b1**2/8)
-    if y < 0:
-        y = 0
+    y = max(y, 0)
 
     s = y**2 + b2*y + b2**2/4 - b0
     # protection from root of negative number
