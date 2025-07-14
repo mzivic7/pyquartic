@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools", "numba"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyquartic"
+version = "0.1.0"
+description = "Fast and highly accurate cubic and quartic equation solvers"
+authors = [{name = "mzivic7"}]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = ["numpy"]
+keywords = [
+    "polynomial",
+    "equation solver",
+    "quartic",
+    "cubic",
+    "root finding",
+    "numba",
+    "math",
+    "algebra",
+    "fast solver",
+    "high precision"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Software Development :: Libraries",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent"
+]
+
+[project.urls]
+homepage = "https://github.com/mzivic7/pyquartic"
+"Bug Reports" = "https://github.com/mzivic7/pyquartic/issues"
+"Source" = "https://github.com/mzivic7/pyquartic"
+
+[tool.setuptools]
+packages = ["pyquartic"]
+include-package-data = true

@@ -1,14 +1,18 @@
 import time
+
 import numpy as np
+
 import pyquartic
 import pyquartic_nonumba
-
 
 time1 = []
 time2 = []
 time3 = []
+
+rng = np.random.default_rng()
+
 for i in range(1000):
-    coef = np.random.uniform(-10000, 10000, 4)
+    coef = rng.uniform(-10000, 10000, 4)
     coef_inv = coef[::-1]
 
     start = time.perf_counter()
@@ -34,7 +38,7 @@ time4 = []
 time5 = []
 time6 = []
 for i in range(100000):
-    coef = np.random.uniform(-10000, 10000, 5)
+    coef = rng.uniform(-10000, 10000, 5)
     coef_inv = coef[::-1]
 
     start = time.perf_counter()
